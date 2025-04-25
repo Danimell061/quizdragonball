@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fundo: #0b0d15;
+    --fundo2: #111420;
+    --brancoFraco: #ffffffd3;
+    --cinzaClaro: #a2a5b3;
+    --cinzaEscuro: #1c1f2b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Poppins;
+    color: #f0f0f0;
+}
+
+body{
+    /* min-height: 100vh; */
+
+    background: var(--fundo);
+    color: var(--cinzaClaro);
+}
+
+.img{
+    position: fixed;
+    top: 0;
+    z-index: -5;
+    filter: blur(2px);
+    transform: scale(1.1);
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    padding: 2em;
+    margin: auto;  
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    background: var(--cinzaEscuro);
+    position: relative;
+    transition: width 0.5s ease-out, height 0.5s ease-out;
+}
+
+.card h1{
+    transition: translate 0.3s ease-out, border 0.1s ease-out, background-color 0.1s ease, color 0.5s ease;
+}
+
+.card2{
+    padding: 2em;
+    margin: auto;  
+    width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    background: var(--cinzaEscuro);
+    position: relative;
+}
+.card2 h1{
+    margin-bottom: 15px;
+}
+
+.card2 p{
+    margin-bottom: 15px;
+    transition: translate 0.3s ease-out, border 0.1s ease-out, background-color 0.1s ease, color 0.5s ease;
+}
+
+.card p{
+    transition: translate 0.3s ease-out, border 0.1s ease-out, background-color 0.1s ease, color 0.5s ease;
+}
+
+.card::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient( #ecff45, #a89805, #ecff45, #a89805, #ecff45);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+}
+
+.card2::after, .card2::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient( #ecff45, #a89805, #ecff45, #a89805, #ecff45);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+}
+
+.card2::before{
+    filter: blur(1.5em);
+    opacity: 0.5;
+}
+
+.img::after{
+    content: '';
+    position: fixed;
+    height: 110%;
+    width: 100%;
+    background: var(--fundo);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+[name="opcoes"]{
+    width: 100%;
+    font-family: Poppins;
+    text-align: left;
+    border-radius: 10px;
+    background-color: var(--fundo);
+    border: 2px solid var(--fundo);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.699));
+    color: var(--brancoFraco);
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 0px;
+    
+}
+
+[name="opcoes"]:hover{
+    translate: 3px;
+    border: #aab840cb 2px solid;
+}
+
+[name="opcoes"]:active{
+    background-color: var(--fundo2);
+    border: #eeff00cb 2px solid;
+}
+
+[name="enviar"]{
+    width: 50%;
+    font-family: Poppins;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--fundo);
+    border: 2px var(--fundo) solid;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.699));
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+[name="enviar"]:hover{
+    /* transform: scale(1.03); */
+    border: #aab840cb 2px solid;
+}
+
+[name="enviar"]:active{
+    background-color: var(--fundo2);
+    border: #eeff00cb 2px solid;
+}
+
+#form input{
+    transition: translate 0.3s ease-out, border 0.1s ease-out, background-color 0.1s ease, color 0.5s ease;
+}
+
+.selecionado {
+    border: #eeff00cb 2px solid !important;
+}
+
+
+.cooldown {
+    background-color: var(--fundo) !important;
+    translate: 0px !important;
+    border: 2px var(--fundo) solid !important;
+    color: var(--fundo) !important;
+}
+
+.cooldown1 {
+    background-color: var(--cinzaEscuro) !important;
+    translate: 0px !important;
+    color: var(--cinzaEscuro) !important;
+}
+
+.img2{
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: #eeff00a1 2px solid;
+    transition: 0.3s all;
+}
+
+.img2:hover{
+    border: #eeff00 2px solid;
+}
